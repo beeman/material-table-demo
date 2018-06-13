@@ -3,7 +3,16 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   template: `
-    <app-material-table></app-material-table>  
+    <mat-toolbar color="primary">
+      <a mat-button routerLink="static">
+        Static
+      </a>
+      <a mat-button routerLink="dynamic">
+        Dynamic
+      </a>
+    </mat-toolbar>
+    <router-outlet></router-outlet>
   `,
 })
-export class AppComponent {}
+export class AppComponent {
+}
