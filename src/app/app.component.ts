@@ -10,6 +10,9 @@ import { Component } from '@angular/core';
       <a mat-button routerLink="dynamic">
         Dynamic
       </a>
+      <a mat-button routerLink="api">
+        API
+      </a>
     </mat-toolbar>
     <router-outlet></router-outlet>
   `,

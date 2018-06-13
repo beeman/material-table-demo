@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
@@ -6,6 +7,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
 
+import { ApiMaterialTableComponent } from './api-material-table/api-material-table.component';
 import { DynamicMaterialTableComponent } from './dynamic-material-table/dynamic-material-table.component';
 import { StaticMaterialTableComponent } from './static-material-table/static-material-table.component';
 
@@ -19,17 +21,22 @@ const routes: Routes = [{
 }, {
   path: 'dynamic',
   component: DynamicMaterialTableComponent,
+}, {
+  path: 'api',
+  component: ApiMaterialTableComponent,
 }];
 
 @NgModule({
   declarations: [
     AppComponent,
+    ApiMaterialTableComponent,
     DynamicMaterialTableComponent,
     StaticMaterialTableComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     MatButtonModule,
     MatTableModule,
     MatToolbarModule,
